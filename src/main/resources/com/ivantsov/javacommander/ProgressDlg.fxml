@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxWidth="400" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ivantsov.javacommander.progress.ProgressDlgCtrl">
+
+    <Label fx:id="txtTitleAction" alignment="CENTER" text="Copy:">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+        <padding>
+            <Insets bottom="5" top="3"/>
+        </padding>
+    </Label>
+
+    <GridPane>
+        <Label fx:id="txtFrom" text="From: " GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font>
+                <Font name="System Bold"/>
+            </font>
+        </Label>
+        <Label fx:id="txtTo" text="To: " GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold"/>
+            </font>
+        </Label>
+        <Label fx:id="txtPathFrom" text="C:\win\tmp\" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label fx:id="txtPathTo" text="D:\archives\current\data\" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <columnConstraints>
+            <ColumnConstraints minWidth="-Infinity"/>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+    </GridPane>
+
+    <HBox alignment="CENTER">
+        <AnchorPane HBox.hgrow="ALWAYS">
+            <ProgressBar fx:id="progressItemPercent"
+                         prefHeight="25.0"
+                         progress="0.45"
+                         AnchorPane.leftAnchor="0.0"
+                         AnchorPane.rightAnchor="0.0">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+            </ProgressBar>
+            <padding>
+                <Insets right="5.0"/>
+            </padding>
+        </AnchorPane>
+        <Label fx:id="txtItemPercent" alignment="CENTER_RIGHT" text="45" VBox.vgrow="ALWAYS"/>
+        <Label>%</Label>
+        <padding>
+            <Insets bottom="5" left="0" right="0" top="5"/>
+        </padding>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <AnchorPane HBox.hgrow="ALWAYS">
+            <ProgressBar fx:id="progressCommonPercent"
+                         prefHeight="25.0"
+                         progress="0.9"
+                         AnchorPane.leftAnchor="0.0"
+                         AnchorPane.rightAnchor="0.0"/>
+            <padding>
+                <Insets right="5.0"/>
+            </padding>
+        </AnchorPane>
+        <Label fx:id="txtCommonPercent" alignment="CENTER_RIGHT" text="90"/>
+        <Label>%</Label>
+        <padding>
+            <Insets bottom="5" left="0" right="0" top="0"/>
+        </padding>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <AnchorPane HBox.hgrow="ALWAYS">
+            <Label fx:id="txtItemsProgress" alignment="CENTER_LEFT" text="234 / 200"/>
+        </AnchorPane>
+        <Label fx:id="txtSizeProgress" alignment="CENTER_RIGHT" text="234 M / 123 M"/>
+    </HBox>
+
+    <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+            <Button fx:id="btnPause" defaultButton="true" mnemonicParsing="false" text="Pause"/>
+        </buttons>
+        <buttons>
+            <Button fx:id="btnCancel" cancelButton="true" mnemonicParsing="false" text="Cancel"/>
+        </buttons>
+    </ButtonBar>
+
+    <padding>
+        <Insets bottom="5" left="20" right="20" top="5"/>
+    </padding>
+
+</VBox>

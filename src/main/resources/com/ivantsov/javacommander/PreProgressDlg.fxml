@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import javafx.scene.control.*?>-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxWidth="400" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivantsov.javacommander.progress.PreProgressDlgCtrl">
+
+    <Label fx:id="txtTitleAction" alignment="CENTER" text="Copy 5 file(s)">
+        <padding>
+            <Insets bottom="5" top="3" />
+        </padding>
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+    </Label>
+
+    <GridPane>
+        <Label fx:id="txtFrom" text="From: " GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Label fx:id="txtTo" text="To: " GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Label fx:id="txtPathFrom" text="C:\win\tmp\" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="txtPathTo" text="D:\archives\current\data\archives\current\data\archives\current\data\archives\current\data\archives\current\data\" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <columnConstraints>
+            <ColumnConstraints minWidth="-Infinity" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+            <Button fx:id="btnCancel" onAction="#actionCancel" cancelButton="true" text="Cancel"/>
+        </buttons>
+        <buttons>
+            <Button fx:id="btnOk" onAction="#actionOk" defaultButton="true" text="Ok" />
+        </buttons>
+    </ButtonBar>
+
+    <padding>
+        <Insets bottom="5" left="20" right="20" top="5" />
+    </padding>
+
+</VBox>

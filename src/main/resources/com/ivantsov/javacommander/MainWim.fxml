@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" onKeyReleased="#mainWinOnKeyPressedAction" xmlns="http://javafx.com/javafx/11"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivantsov.javacommander.MainCtrl">
+
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem accelerator="F3" onAction="#fileMenuViewAction" text="View" />
+            <MenuItem accelerator="F4" onAction="#fileMenuEditAction" text="Edit" />
+            <SeparatorMenuItem />
+            <MenuItem accelerator="F5" onAction="#fileMenuCopyAction" text="Copy" />
+            <MenuItem accelerator="F6" onAction="#fileMenuMoveAction" text="Move" />
+            <MenuItem accelerator="F7" onAction="#fileMenuNewFolderAction" text="New Folder..." />
+            <MenuItem accelerator="F8" onAction="#fileMenuDeleteAction" text="Delete" />
+            <SeparatorMenuItem />
+            <MenuItem accelerator="F10" onAction="#fileMenuExitAction" text="Exit" />
+        </Menu>
+    </MenuBar>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <SplitPane dividerPositions="0.5" HBox.hgrow="ALWAYS">
+            <fx:include fx:id="leftPanel" source="PanelControl.fxml" HBox.hgrow="ALWAYS" />
+            <fx:include fx:id="rightPanel" source="PanelControl.fxml" HBox.hgrow="ALWAYS" />
+        </SplitPane>
+    </HBox>
+
+    <HBox spacing="5">
+        <!-- TODO: implement buttons "View" and "Edit" -->
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnViewAction" text="F3 View" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnEditAction" text="F4 Edit" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnCopyAction" text="F5 Copy" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnMoveAction" text="F6 Move" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnNewFolderAction" text="F7 New Folder" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnDeleteAction" text="F8 Delete" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnExitAction" text="F10 Exit" HBox.hgrow="ALWAYS" />
+
+
+    </HBox>
+</VBox>

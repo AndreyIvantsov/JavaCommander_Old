@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" onKeyReleased="#panelOnKeyReleased" xmlns="http://javafx.com/javafx/11"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivantsov.javacommander.PanelCtrl">
+   <children>
+       <HBox>
+          <children>
+              <ComboBox fx:id="disksBox" onAction="#selectDiskAction" />
+              <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
+              <Button onAction="#btnPathUpAction" text="Up" />
+          </children>
+       </HBox>
+       <TableView fx:id="filesTable" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>
